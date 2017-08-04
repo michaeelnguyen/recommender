@@ -90,18 +90,17 @@ def getRecommendations(products,product,similarity=pear):
     rankings.reverse( )
     return rankings
 
-def calculateSimilarItems(products,n = 10):
+def calculateSimilarItems(products,n = 20):
     # Create a dictionary of items showing which other items they
     # are most similar to.
     result = {}
-    c = 0
+    
+    print('Processing similarities for %d items...' % len(products))
     for item in products:
-        # Status updates for large datasets
-        c += 1
-        if c % 100 == 0: print ("%d / %d" % (c,len(products)))
         # Find the most similar items to this one
         scores = topMatches(products,item,n = n,similarity = pear)
         result[item] = scores
+    print('DONE')
     return result
 
 # Get recommendations based on similar items
