@@ -2,7 +2,7 @@
 Collaborative Filtering for Recommender Systems using Amazon dataset
 
 ## Introduction
-Using concepts from the book, [Collective Intelligence](http://shop.oreilly.com/product/9780596529321.do) and the Amazon Clothing and Accessories dataset provided by [Standford University](https://snap.stanford.edu/data/web-Amazon.html), I applied what I have learned so far to make a recommender system in Python that touches on **user-based** and **item-based filtering**.
+Using concepts from the book, [Collective Intelligence](http://shop.oreilly.com/product/9780596529321.do) and the Amazon Clothing and Accessories dataset provided by [Stanford University](https://snap.stanford.edu/data/web-Amazon.html), I applied what I have learned so far to make a recommender system in Python that touches on **user-based** and **item-based filtering**.
 
 ## Preprocessing
 The first thing done was to organize the data to make it more readable and easier to manipulate. The text file was parsed and then converted to a CSV format. The CSV file was then used to make a product dictionary which contained a user dictionary that contained all the ratings from the users for that specific product. To avoid recomputation of **19,194 items**, the product dictionary was saved as a pickle file for later use. 
